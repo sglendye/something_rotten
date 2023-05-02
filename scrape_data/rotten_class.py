@@ -25,7 +25,6 @@ class RottenTomatoes:
         self.driver.close()
         return scores, reviews
 
-
     def reality_check(self, url):
         isReal = requests.get(url)
         if isReal.status_code == 200:
@@ -47,7 +46,6 @@ class RottenTomatoes:
         tomatometer = tomatometer_container[0].get_attribute('tomatometerscore')
 
         return [film, audience, tomatometer]
-
 
     def rotten_reviews(self, url):
         self.driver.get(url+'/reviews?type=top_critics')
