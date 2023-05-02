@@ -9,9 +9,9 @@ class Wikimedia:
     def scrape_data(self, year):
 
         url = "https://en.wikipedia.org/wiki/List_of_American_films_of_{}".format(str(year))  
-        isReal = reality_check(self, url)
+        isReal = self.reality_check(self, url)
         if isReal:
-            
+
             # All elements with the class name "wikitable"
             tables = self.driver.find_elements(By.CLASS_NAME, "wikitable")
             tables = tables[1:] # The first table is top grossing films of the year. While interesting, these films already exist in the tables below
