@@ -7,7 +7,6 @@ sys.path.append(__file__)
 from wiki_class import Wikimedia
 from datetime import datetime
 
-
 wikis = Wikimedia(driver_path = 'path.exe')
 
 def backfill():
