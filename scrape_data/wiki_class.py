@@ -7,7 +7,6 @@ class Wikimedia:
         self.driver = webdriver.Chrome(driver_path)
 
     def scrape_data(self, year):
-
         url = "https://en.wikipedia.org/wiki/List_of_American_films_of_{}".format(str(year))  
         isReal = self.reality_check(self, url)
         if isReal:
